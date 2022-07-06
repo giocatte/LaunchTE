@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="launch.css">
+    <title>Launch</title>
+</head>
+<body>
+    <div class="container">
+        <div class="menu" id="tesst">
+                <h3>Trasporti Eccezionali</h3>
+                <ul>
+                    <li><a onclick="openFrame('trasportieccezionali.adspmarligureorientale.it')">ADSP Mar Ligure Orientale</a></li>
+                    <li><a onclick="openFrame('teonline.astralspa.it/',false)">Astral</a></li>
+                    <li><a onclick="openFrame('traspec.egov.bz.it/')">Bolzano</a></li>
+                    <li><a onclick="openFrame('teonline.regione.emilia-romagna.it/')" >Emilia Romagna</a></li>
+                    <li><a onclick="openFrame('www.trasporti.fvgstrade.it/')" >Friuli Venezia Giulia</a></li>
+                    <li><a onclick="openFrame('teonline.provincia.latina.it/')" >Latina</a></li>
+                    <li><a onclick="openFrame('www.teonline.servizirl.it/')" >Lombardia</a></li>
+                    <li><a onclick="openFrame('regionemarche.transitieccezionali.com/')" >Marche</a></li>
+                    <li><a onclick="openFrame('regionepiemonte.transitieccezionali.com/')" >Piemonte</a></li>
+                    <li><a onclick="openFrame('trasportieccezionali.cittametropolitanaroma.it/')" >Roma</a></li>
+                    <li><a onclick="openFrame('provinciasassari.transitieccezionali.com/')" >Sassari</a></li>
+                    <li><a onclick="openFrame('regionetoscana.transitieccezionali.com/')" href="https://regionetoscana.transitieccezionali.com/" target="_blank">Toscana</a></li>
+                    <li><a onclick="openFrame('www.trasportieccezionali.provincia.tn.it/')" >Trento</a></li>
+                    <li><a onclick="openFrame('teonline.regione.vda.it/')">Valle d'Aosta</a></li>
+                    <li><a onclick="openFrame('www.venetostradetrasporti.it/')">VenetoStrade</a></li>
+                    <li><a onclick="openFrame('trasportiec.cittametropolitana.ve.it/')">Venezia</a></li>
+                </ul>
+                <ul>
+                    <li><a href="https://webgis.atlassian.net/issues/?jql=project%20%3D%20HDTE%20order%20by%20created%20DESC" target="_blank"> Help Desk TEOnline generale</a></li>
+                    <li><a href="https://webgis.atlassian.net/issues/?jql=assignee%20in%20(EMPTY%2C%20557058%3A4fba78d4-3c4e-4e63-a772-3ca0621de900)%20AND%20created%20%3E%3D%20-3w%20AND%20project%20%3D%20HDTE%20AND%20status%20%3D%20%22In%20attesa%20di%20presa%20in%20carico%22%20ORDER%20BY%20created%20ASC%2C%20updated%20DESC%2C%20resolution%20ASC" target="_blank"> Looking for support</a></li>
+                    <li><a href="https://webgis.atlassian.net/issues/?jql=assignee%20in%20(currentUser())%20AND%20project%20%3D%20HDTE%20AND%20status%20%3D%20%22In%20attesa%20di%20presa%20in%20carico%22%20ORDER%20BY%20created%20ASC" target="_blank"> Waiting for My support</a></li>
+                    <li><a href="https://webgis.atlassian.net/jira/your-work" target="_blank"> My work</a></li>
+                </ul>
+        </div>
+        <div class="frame-container" id="test">
+            <iframe id="demo" title='description'></iframe>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function openFrame(url, https) {
+        var completeUrl;
+        if(!https) completeUrl= "http://"+url;
+        else completeUrl = "https://"+url;
+        //document.getElementById('demo').src = completeUrl;
+        let width=document.getElementById('test').clientWidth;
+        let height=document.getElementById('test').clientHeight;
+        let left=document.getElementById('tesst').clientWidth;
+        let windowFeatures = "left="+left+",top=400px,width="+width+",height="+height+"";
+        console.log("width:",width);
+        console.log("height:", height)
+        window.open(completeUrl, "_top", windowFeatures)
+    }
+    /*
+        "https://trasportieccezionali.adspmarligureorientale.it";
+        "http://teonline.astralspa.it/";
+        "https://traspec.egov.bz.it/";
+        "https://teonline.regione.emilia-romagna.it/";
+        "http://www.trasporti.fvgstrade.it/";
+        "http://teonline.provincia.latina.it/";
+        "https://www.teonline.servizirl.it/";
+        "https://regionemarche.transitieccezionali.com/" ;
+        "https://regionepiemonte.transitieccezionali.com/" ;
+        "http://trasportieccezionali.cittametropolitanaroma.it/" ;
+        "https://provinciasassari.transitieccezionali.com/" ;
+        "https://regionetoscana.transitieccezionali.com/" ;
+        "http://www.trasportieccezionali.provincia.tn.it/";
+        "https://teonline.regione.vda.it/";
+        "http://www.venetostradetrasporti.it/" ;
+        "https://trasportiec.cittametropolitana.ve.it/";
+    */
+</script>
