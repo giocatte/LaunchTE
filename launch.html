@@ -37,6 +37,14 @@
                 </ul>
         </div>
         <div class="frame-container" id="test">
+            <img class="back" src="./images/ItalyRegions.png" alt="niet" usemap="#workmap">
+            <map name="workmap">
+              <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+              <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+              <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+            </map>
+
+
             <iframe id="demo" title='description'></iframe>
         </div>
     </div>
@@ -54,7 +62,7 @@
         let windowFeatures = "left="+left+",top=400px,width="+width+",height="+height+"";
         console.log("width:",width);
         console.log("height:", height)
-        window.open(completeUrl, "_top", windowFeatures)
+        window.open(completeUrl, "_self", windowFeatures)
     }
     /*
         "https://trasportieccezionali.adspmarligureorientale.it";
