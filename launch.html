@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="launch.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon2.ico">
     <title>Launch</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
                 <ul>
                     <li><a onclick="openFrame('trasportieccezionali.adspmarligureorientale.it')">ADSP Mar Ligure Orientale</a></li>
                     <li><a onclick="openFrame('teonline.astralspa.it/',false)">Astral</a></li>
-                    <li><a onclick="openFrame('traspec.egov.bz.it/')">Bolzano</a></li>
+                    <li><a onclick="openFrame('traspec.civis.bz.it/')">Bolzano</a></li>
                     <li><a onclick="openFrame('teonline.regione.emilia-romagna.it/')" >Emilia Romagna</a></li>
                     <li><a onclick="openFrame('www.trasporti.fvgstrade.it/')" >Friuli Venezia Giulia</a></li>
                     <li><a onclick="openFrame('teonline.provincia.latina.it/')" >Latina</a></li>
@@ -37,15 +38,19 @@
                 </ul>
         </div>
         <div class="frame-container" id="test">
-            <img class="back" src="./images/ItalyRegions.png" alt="niet" usemap="#workmap">
+            <img class="back" src="./images/ItalyRegions.png" alt="niet">
+            <!-- usemap="#workmap"
             <map name="workmap">
-              <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
-              <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
-              <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+              <area shape="rect" name="ravda" coords="20,88,84,130" alt="Computer" onclick="openFrame('teonline.regione.vda.it/')">
+              <area shape="poly" name="piemonte" coords="20,88,84,130" alt="" onclick="openFrame(' ')">
+              <area shape="rect" name=" " coords=" " alt="" onclick="openFrame(' ')">
+              <area shape="rect" name=" " coords=" " alt="" onclick="openFrame(' ')">
+              <area shape="rect" name=" " coords=" " alt="" onclick="openFrame(' ')">
+              <area shape="rect" name=" " coords=" " alt="" onclick="openFrame(' ')">
+              <area shape="rect" name=" " coords=" " alt="" onclick="openFrame(' ')">
             </map>
-
-
-            <iframe id="demo" title='description'></iframe>
+            -->
+            <!--<iframe id="demo" title='description'></iframe>-->
         </div>
     </div>
 </body>
@@ -55,14 +60,14 @@
         var completeUrl;
         if(!https) completeUrl= "http://"+url;
         else completeUrl = "https://"+url;
-        //document.getElementById('demo').src = completeUrl;
+        /*document.getElementById('demo').src = completeUrl;
         let width=document.getElementById('test').clientWidth;
         let height=document.getElementById('test').clientHeight;
         let left=document.getElementById('tesst').clientWidth;
         let windowFeatures = "left="+left+",top=400px,width="+width+",height="+height+"";
         console.log("width:",width);
-        console.log("height:", height)
-        window.open(completeUrl, "_self", windowFeatures)
+        console.log("height:", height)*/
+        window.open(completeUrl, "_self")
     }
     /*
         "https://trasportieccezionali.adspmarligureorientale.it";

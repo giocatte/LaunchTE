@@ -1,6 +1,7 @@
 body{
     margin: 0;
-    background-color: rgb(111, 105, 105);
+    /*background-color: rgb(68, 68, 68);*/
+    background-image: url("./images/ItFlag.jpg");
 }
 .container{
     /*background-image: url("./images/ItalyRegions.png");
@@ -8,24 +9,28 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;*/
+    background-color: rgba(255, 255, 255, 0.15);
+    position: relative;
     width: 100vw;
     height: 100vh;
     margin: 0;
 }
 img.back{
-    height: 500px;
+    position: relative;
+    height: auto;
+    max-height: 100%;
     width: auto;
-
+    max-width: 100%;
+    left: 360px;
+    cursor: default;
 }
 .menu{
     height: 100vh;
     width: 12vw;
     position: relative;
+    text-align: center;
     float: left;
-    background-color: rgba(134, 134, 134, 0.5);
-}
-h3{
-    margin: 0;
+    background-color: rgba(255, 255, 255, 0.4);
 }
 th,td{    
     border: 1px solid black;
@@ -34,8 +39,8 @@ th,td{
 div.frame-container{
     float: left;
     width: 88vw;
-    height: 100vh;
-    position: relative;
+    height: 90vh;
+    position: inherit;
 }
 #demo{
     width: 1%;
@@ -47,10 +52,19 @@ td{
 }
 a{
     color: black;
+    text-decoration: underline;
 }
 a:hover{
     color: red;
+    cursor: pointer;
 }
 a:visited{
     text-decoration: none;       
-} 
+}
+ul{
+    line-height: 1.8rem;
+    text-align: left;
+}
+map{
+    cursor: pointer;
+}
